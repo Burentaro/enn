@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>人結 - {{ title }}</title>
+</head>
+<body>
+	<div class="topnav">
+		<a class="active" href="{% url 'home' %}">ホーム</a>
+		<a class="active" href="{% url 'greeting' %}">挨拶</a>
+		<a class="active" href="{% url 'menu' %}">メニュ</a>
+		<a class="active" href="{% url 'courses' %}">コース</a>
+	</div>
+	
+	{% block content %}
+	This is a replacement.
+	{% endblock %}
+
+</body>
+</html>
