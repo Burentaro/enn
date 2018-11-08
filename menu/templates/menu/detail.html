@@ -1,0 +1,17 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+<h3>{{ item }}</h3>
+<p>
+	{% if item.catgory == Food %}
+		Food!
+	{% else %}
+		Not food :(
+	{% endif %}
+</p>
+
+<p>{{ item.price }}</p>
+
+
+
+{% endblock content %}

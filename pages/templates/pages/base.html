@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>人結 - {{ title }}</title>
+	<title>
+		{% if title %}
+			人結 - {{ title }}
+		{% else %}
+			～人結で会いましょう～
+		{% endif %}
+	</title>
 </head>
 <body>
 	<div class="topnav">

@@ -14,16 +14,6 @@ def home(request):
 	return render(request, 'pages/home.html', context)
 
 
-def menu(request):
-
-	context = {
-		'items': MenuItem.objects.all(),
-		'title': 'メニュ',
-	}
-
-	return render(request, 'pages/menu.html', context)
-
-
 def greeting(request):
 
 	context = {
