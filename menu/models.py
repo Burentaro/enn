@@ -10,7 +10,7 @@ class MenuItem(models.Model):
 		choices=[('Drink', 'Drink'), ('Food', 'Food')])
 	description = models.TextField()
 	price = models.DecimalField(decimal_places=0, max_digits=1000)
-	featured = models.BooleanField()
+	featured = models.BooleanField(default=False)
 
 	def __str__(self):
 		return self.name
