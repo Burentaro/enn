@@ -11,6 +11,7 @@ class MenuItem(models.Model):
 	description = models.TextField()
 	price = models.DecimalField(decimal_places=0, max_digits=1000)
 	featured = models.BooleanField(default=False)
+	image = models.ImageField()
 
 	def __str__(self):
 		return self.name

@@ -7,8 +7,13 @@
 
 
 {% for item in items %}
-	<h4>{{ item.name }}</h4>
-	<p>{{ item.description }} </p>
+	<div class="card" style="width: 18rem; display: inline-block; flex: 1 1 0">
+  		<div class="card-body">
+    		<h5 class="card-title">{{ item.name }}</h5>
+    		<p class="card-text">{{ item.description }}</p>
+    		<a href="#" class="btn btn-primary">Go somewhere</a>
+  		</div>
+	</div>
 {% endfor %}
 
 
