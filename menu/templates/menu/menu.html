@@ -2,21 +2,20 @@
 
 {% block content %}
 
+<div class="jumbotron">
+	<h3>～海と大陸の恵みがたくさん～</h3>
+</div>
 
-<h3>～海と大陸の恵みがたくさん～</h3>
-
-
-	<div class="jumbotron">
-
+	<div class="cardbox">
 		{% for item in items %}
-			<div class="card" style="margin-bottom: 10px; margin-left: 20px; float: left; width: 23%;">
-			  <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
-			  <div class="card-body">
-			    <h3 class="card-title">{{ item.name }}</h3>
-			    <p class="card-text">{{ item.description }}</p>
-			    <a href="#" class="btn btn-primary">Go somewhere</a>
-			  </div>
-			</div>
+		<div class="card" style="width: 20%; height: 500px; margin-bottom: 20px; margin-left: 10px; display: inline-flex;" id="menuitem">
+		  <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+		  <div class="card-body">
+		    <h4 class="card-title">{{ item.name }}</h5>
+		    <p class="card-text">{{ item.description }}</p>
+		    <a href="#" class="btn btn-primary" style="position: ">Go somewhere</a>
+		  </div>
+		</div>
 		{% endfor %}
 	</div>
 
