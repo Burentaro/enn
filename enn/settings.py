@@ -121,5 +121,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '/media/')
+MEDIA_ROOT = 'C:\\Users\\VRQA_4\\Documents\\Django\\enn\\media'
 MEDIA_URL = '/media/'
