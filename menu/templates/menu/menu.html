@@ -5,20 +5,39 @@
 <div class="jumbotron">
 	<h3>～海と大陸の恵みがたくさん～</h3>
 </div>
+	<div id="combinedmenu">
 
-	<div class="cardbox">
-		{% for item in items %}
-		<div class="card" style="width: 20%; height: 500px; margin-bottom: 20px; margin-left: 10px; display: inline-flex;" id="menuitem">
-		  <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
-		  <div class="card-body">
-		    <h4 class="card-title">{{ item.name }}</h5>
-		    <p class="card-text">{{ item.description }}</p>
-		    <a href="#" class="btn btn-primary" style="position: ">Go somewhere</a>
-		  </div>
+		<h3>料理</h3>
+
+		<div class="cardbox" id="menubox">
+			{% for dish in food %}
+			<div class="card" id="menuitem">
+			  <img class="card-img-top" src="{{ dish.image.url }}" alt="Card image cap">
+			  <div class="card-body">
+			    <h4 class="card-title">{{ dish.name }}</h4>
+			    <p class="card-text">{{ dish.description }}</p>
+			    <a href="#" class="btn btn-primary" style="position: ">Go somewhere</a>
+			  </div>
+			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
-	</div>
 
+		<h3>お飲み物</h3>
+
+		<div class="cardbox" id="menubox">
+			{% for drink in drinks %}
+			<div class="card" id="menuitem">
+			  <img class="card-img-top" src="{{ drink.image.url }}" alt="Card image cap">
+			  <div class="card-body">
+			    <h4 class="card-title">{{ drink.name }}</h4>
+			    <p class="card-text">{{ drink.description }}</p>
+			    <a href="#" class="btn btn-primary" style="position: ">Go somewhere</a>
+			  </div>
+			</div>
+			{% endfor %}
+		</div>
+
+	</div>
 
 
 {% endblock content %}
