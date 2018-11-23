@@ -10,7 +10,8 @@ from .forms import MenuItemForm
 def menu(request):
 
 	context = {
-		'items': MenuItem.objects.all(),
+		'food': MenuItem.objects.filter(category="Food"),
+		'drinks': MenuItem.objects.filter(category="Drink"),
 		'title': 'メニュ',
 	}
 
